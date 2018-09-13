@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#peopleForm").submit(function(event) {
+  $("#bookForm").submit(function(event) {
     var form = $(this);
     event.preventDefault();
     $.ajax({
@@ -11,7 +11,7 @@ $(document).ready(function() {
       }
     });
   });
-  $("#peopleEditForm").submit(function(event) {
+  $("#bookEditForm").submit(function(event) {
     var form = $(this);
     event.preventDefault();
     $.ajax({

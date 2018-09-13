@@ -4,22 +4,22 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 </head>
-<script src="../../public/script.js"></script>
+<script src="../public/script.js"></script>
 
+<h1><?php echo $title; ?></h1>
 
-<form id='peopleEditForm' data-id="<?php echo $books["id"]; ?>">
+<form id='bookForm' data-id="<?php echo $person["id"]; ?>"  <?php echo $id; ?>>
   <div class="form-group">
     <label for="title">Title</label>
-    <input name="title" type="text" class="form-control" id="name" value="<?php echo $books["title"]; ?>">
+    <input name="title" type="text" class="form-control" id="title" placeholder="Enter Title">
   </div>
   <div class="form-group">
     <label for="author">Author</label>
-    <input name="author" type="text" class="form-control" id="occupation" value="<?php echo $books["author"]; ?>">
+    <input name="author" type="text" class="form-control" id="author" placeholder="Enter Author">
   </div>
   <div class="form-group">
     <label for="year">Year</label>
-    <input name="year" type="text" class="form-control" id="age" value="<?php echo $books["year"]; ?>">
-
+    <input name="year" type="text" class="form-control" id="year" placeholder="Enter Year">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

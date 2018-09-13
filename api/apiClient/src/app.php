@@ -76,14 +76,14 @@ class App
            "title" => "Books",
            "tableRows" => $tableRows
        ];
-       return $this->renderer->render($response, "/people.html", $templateVariables);
+       return $this->renderer->render($response, "/books.html", $templateVariables);
      });
      $app->get('/books/add', function(Request $request, Response $response) {
        $templateVariables = [
          "type" => "new",
          "title" => "Create Book"
        ];
-       return $this->renderer->render($response, "/peopleForm.html", $templateVariables);
+       return $this->renderer->render($response, "/bookForm.html", $templateVariables);
      });
      $app->get('/books/{id}', function (Request $request, Response $response, array $args) {
          $id = $args['id'];
@@ -104,7 +104,7 @@ class App
          ];
 
 
-         return $this->renderer->render($response, "/peopleEditForm.html", $templateVariables);
+         return $this->renderer->render($response, "/bookEditForm.html", $templateVariables);
      });
 
      $app->delete('/books/{id}', function (Request $request, Response $response, array $args) {
